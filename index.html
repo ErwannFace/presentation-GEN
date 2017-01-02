@@ -4,8 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
-
+		<title>Code Académie - Présentation</title>
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 
@@ -20,15 +19,226 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style type="text/css">
+			.logo{
+				width:30vw;
+			}
+			.author{
+				float:right;
+			}
+		</style>
+	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js'></script>
+
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+<!------------------------ NOUS -------------------------->
+				<section>
+					<section>
+						<h1>Code Académie</h1>	
+						<h3>INSA Rennes</h3>
+						<h4>6 Janvier 2017</h4>	
+					</section>	
+					<section>
+						<h2>Qui sommes-nous ?</h2>
+						<a href="http://code-academie.fr/">
+							<img src="assets/logo-codeacademie.png" class='logo'>
+						</a>
+					</section>
+					<section>
+						<h2>FACE Rennes</h2>
+						<a href="http://face.bzh/">
+							<img src="assets/RENNES_PNG.png" class='logo'>
+						</a>
+					</section>
+					<section>
+						<h2>Simplon.co</h2>
+						<a href="http://simplon.co/">
+							<img src="assets/logo_simplon.png" class='logo'>
+						</a>
+					</section>
+					<section>
+						<h2>Notre Promo #01</h2>
+						<img src="assets/promo01.JPG">
+					</section>
+					<section>
+						<h2>Notre Promo #01</h2>
+						<h3>Niveau d'études</h3>
+						<canvas id="myChart" width="400" height="200px"></canvas>
+						<script>
+						var ctx = document.getElementById("myChart");
+						var myChart = new Chart(ctx, {
+						    type: 'bar',
+						    data: {
+						        labels: ["N/A", "BEP/CAP", "BAC/BAC Pro", "BAC+2 à BAC+4", "BAC+5 à BAC+8"],
+						        datasets: [{
+						            label: '# / niveau études',
+						            data: [4, 2, 8, 11, 1],
+						            backgroundColor: [
+						                'rgba(255, 99, 132, 0.2)',
+						                'rgba(54, 162, 235, 0.2)',
+						                'rgba(255, 206, 86, 0.2)',
+						                'rgba(75, 192, 192, 0.2)',
+						                'rgba(153, 102, 255, 0.2)'
+						            ],
+						            borderColor: [
+						                'rgba(255,99,132,1)',
+						                'rgba(54, 162, 235, 1)',
+						                'rgba(255, 206, 86, 1)',
+						                'rgba(75, 192, 192, 1)',
+						                'rgba(153, 102, 255, 1)'
+						            ],
+						            borderWidth: 1
+						        }]
+						    },
+						    options: {
+						        scales: {
+						            yAxes: [{
+						                ticks: {
+						                    beginAtZero:true
+						                }
+						            }]
+						        }
+						    }
+						});
+						</script>
+					</section>
+					<section>
+						<h2>Notre Promo #01</h2>
+						<div>
+							<div style='width:50%; float:left'>
+								<canvas id="cht_sx" width="400" height="200px"></canvas>
+								Répartition par Sexe
+							</div>
+							<div style='width:50%; float:left'>
+								<canvas id="cht_age" width="400" height="200px"></canvas>
+								Répartition par Age
+							</div>
+						<script>
+						var ctx = document.getElementById("cht_sx");
+						var chart_sx = new Chart(ctx, {
+						    type: 'pie',
+						    data: {
+						        labels: ["Femme", "Homme"],
+						        datasets: [{
+						            label: '# / sexe',
+						            data: [8,18],
+						            backgroundColor: [
+						                'rgba(255, 99, 132, 0.2)',
+						                'rgba(54, 162, 235, 0.2)'
+						            ],
+						            borderColor: [
+						                'rgba(255,99,132,1)',
+						                'rgba(54, 162, 235, 1)'
+						            ],
+						            borderWidth: 1
+						        }]
+						    },
+						    options: {
+						        scales: {
+						            yAxes: [{
+						                ticks: {
+						                    beginAtZero:true
+						                }
+						            }]
+						        }
+						    }
+						});
+
+						ctx = document.getElementById("cht_age");
+						var chart_sx = new Chart(ctx, {
+						    type: 'pie',
+						    data: {
+						        labels: ["18-25", "26-45", "45 et +"],
+						        datasets: [{
+						            label: '# / age',
+						            data: [10,13, 3],
+						            backgroundColor: [
+						                'rgba(255, 99, 132, 0.2)',
+						                'rgba(54, 162, 235, 0.2)',
+						                'rgba(255, 206, 86, 0.2)'
+						            ],
+						            borderColor: [
+						                'rgba(255,99,132,1)',
+						                'rgba(54, 162, 235, 1)',
+						                'rgba(75, 192, 192, 1)'
+						            ],
+						            borderWidth: 1
+						        }]
+						    },
+						    options: {
+						        scales: {
+						            yAxes: [{
+						                ticks: {
+						                    beginAtZero:true
+						                }
+						            }]
+						        }
+						    }
+						});
+
+						</script>
+					</section>
+				</section>
+<!------------------------ PEDAGOGIE -------------------------->
+				<section>
+					<section>
+					<h2>Notre pédagogie</h2>
+					<pre>“Le grand but de la formation n’est pas le savoir mais l’action”</pre>
+					<span class='author'>&mdash; Herbert Spencer</span>
+					</section>	
+					<section>
+						Inspirée des bootcamps US, il s'agit d'une méthodologie de formation accélérée.
+						Nos outils : <br />	
+						<ul>
+						<li class="fragment">Projet en groupes</li>
+						<li class="fragment">Pair programming</li> 
+						<li class="fragment">Méthodes Agiles</li>
+						</ul>
+					</section>	
+					<section>
+						Ainsi que nos deux méthodes clés : <br /><font color='red'>Learning by doing</font> & <font color=red>Learning by Teaching</font>.
+						<img src="assets/pyramid_learn.jpg">
+					</section>	
+				</section>
+
+<!------------------------ NOS VALEURS -------------------------->
+				<section>
+					<h2>Nos valeurs</h2>
+					<span class="fragment">Solidarité</span>
+					 <span class="fragment"> &mdash; Partage</span>
+					 <span class="fragment"> &mdash; Ecoute</span>
+					 <span class="fragment"> &mdash; Travail en groupe</span>
+				</section>
+				<section>
+					<h2>L'insertion professionelle</h2>
+					<section>
+						<ul>
+							<li>Rédaction d'un CV</li>
+							<li>Rédaction d'une lettre de motivation</li>
+							<li>Rédaction d'un portfolio</li>
+							<li>Des simulations d'entretiens filmés</li>
+						</ul>
+					</section>
+					<section>
+						Des intervenants extérieurs.<br />
+						<ul>
+							<li>6TM</li>
+							<li>Hiboost</li>
+							<li>Shift</li>
+							<li>Elan Créateur</li>
+							<li>FabLab : </li>
+							<li>Steepath</li>
+							<li>Alodom</li>
+							<li>AEIB</li>
+							<li>...</li>
+						</ul>
+					</section>
+				</section>
 			</div>
 		</div>
-
+		<script src="js/echarts-2.2.7/doc/asset/js/jquery.min.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
@@ -46,5 +256,114 @@
 				]
 			});
 		</script>
+<script src="./js/echarts-2.2.7/src/echarts.js"></script>
+				<script type="text/javascript">
+					require('js/echarts-2.2.7/echarts/util/mapData/params').params.bodyMale = {
+					    getGeoJson: function (callback) {
+					        $.ajax({
+					            url: "js/echarts-2.2.7/assets/body-male.svg",
+					            dataType: 'xml',
+					            success: function(xml) {
+					                callback(xml)
+					            }
+					        });
+					    }
+					}
+					option = {
+					    title : {
+					        text : '人体密码',
+					        subtext: '地图SVG扩展',
+					        x:'center'
+					    },
+					    tooltip : {
+					        trigger: 'item'
+					    },
+					    toolbox: {
+					        show : true,
+					        orient : 'vertical',
+					        x: 'right',
+					        y: 'center',
+					        feature : {
+					            mark : {show: true},
+					            dataView : {show: true, readOnly: false},
+					            restore : {show: true},
+					            saveAsImage : {show: true}
+					        }
+					    },
+					    dataRange: {
+					        min: 0,
+					        max: 100,
+					        x: 'center',
+					        y: 'center',
+					        tdext:['High','Low'],
+					        calculable : true,
+					        itemHeight:30,
+					        color: ['orangered','yellow','lightskyblue']
+					    },
+					    series : [
+					        {
+					            name: '人体密码-男',
+					            type: 'map',
+					            mapType: 'bodyMale', // 自定义扩展图表类型
+					            mapLocation: {
+					                x:'left'
+					            },
+					            roam:true,
+					            itemStyle:{
+					                normal:{label:{show:true}},
+					                emphasis:{label:{show:true}}
+					            },
+					            data:[
+					                {name: '头部', value: 90},
+					                {name: '颈部', value: 80},
+					                {name: '胸部', value: 60},
+					                {name: '腹部', value: 60},
+					                {name: '生殖', value: 50},
+					                {name: '上肢', value: 40},
+					                {name: '下肢', value: 30}
+					            ],
+					            textFixed : {
+					                '上肢' : [-60, 0]
+					            },
+					            markPoint : {
+					                symbol:'emptyCircle',
+					                symbolSize : 10,
+					                effect : {
+					                    show: true
+					                },
+					                data : [
+					                    {name: '心脏', value: 100, geoCoord:[138, 126]}
+					                ]
+					            },
+					            markLine : {
+					                smooth:true,
+					                effect : {
+					                    show: true,
+					                    scaleSize: 1,
+					                    period: 30,
+					                    color: '#fff',
+					                    shadowBlur: 5
+					                },
+					                itemStyle : {
+					                    normal: {
+					                        borderWidth:1,
+					                        lineStyle: {
+					                            type: 'solid'
+					                        }
+					                    }
+					                },
+					                data : [
+					                    [
+					                        {name:'男',geoCoord:[138, 126]}, 
+					                        {name:'女',value:90,geoCoord:[268, 56]}
+					                    ]
+					                ]
+					            }
+					        }
+					        
+					    ]
+					};
+				</script>
 	</body>
+
 </html>
