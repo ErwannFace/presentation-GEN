@@ -93,6 +93,9 @@
 						        }]
 						    },
 						    options: {
+						    	legend: {
+            						display: true
+            					},
 						        scales: {
 						            yAxes: [{
 						                ticks: {
@@ -115,6 +118,7 @@
 								<canvas id="cht_age" width="400" height="200px"></canvas>
 								Répartition par Age
 							</div>
+						</div>
 						<script>
 						var ctx = document.getElementById("cht_sx");
 						var chart_sx = new Chart(ctx, {
@@ -202,15 +206,6 @@
 						<img src="assets/pyramid_learn.jpg">
 					</section>	
 				</section>
-
-<!------------------------ NOS VALEURS -------------------------->
-				<section>
-					<h2>Nos valeurs</h2>
-					<span class="fragment">Solidarité</span>
-					 <span class="fragment"> &mdash; Partage</span>
-					 <span class="fragment"> &mdash; Ecoute</span>
-					 <span class="fragment"> &mdash; Travail en groupe</span>
-				</section>
 				<section>
 					<h2>L'insertion professionelle</h2>
 					<section>
@@ -236,6 +231,16 @@
 						</ul>
 					</section>
 				</section>
+<!------------------------ NOS VALEURS -------------------------->
+				<section>
+					<h2>Nos valeurs</h2>
+					<span class="fragment">Solidarité</span>
+					 <span class="fragment"> &mdash; Partage</span>
+					 <span class="fragment"> &mdash; Autonomie</span>
+					 <span class="fragment"> &mdash; Ecoute</span>
+					 <span class="fragment"> &mdash; Travail en groupe</span>
+				</section>
+
 			</div>
 		</div>
 		<script src="js/echarts-2.2.7/doc/asset/js/jquery.min.js"></script>
